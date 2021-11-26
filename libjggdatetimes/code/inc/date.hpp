@@ -15,7 +15,7 @@ public:
    Date(const char *str);
    Date(int year, int month, int day);
    Date(long lvalue);
-   struct tm*  getTM();
+   struct tm*  getTM   (struct tm* ptm);
    long        asLong();
    int getYear();
    int getMonth();

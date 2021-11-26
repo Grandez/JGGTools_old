@@ -21,10 +21,6 @@ namespace NST {
      DateTimeBridge(std::time_t lvalue)              : DateTimeImpl(lvalue) {}
      DateTimeBridge(int year, int month, int day, int hour, int min, int sec) 
                                                 : DateTimeImpl(year, month, day, hour, min, sec) {}
-
-//     string      toString (const char* fmt) { return DateDateTimeBase::toString(fmt); }
-     char*   toChar   (char* ptr, size_t size)                   { return DateTimeImpl::toChar(ptr, size); }
-     char*   format   (char *ptr, size_t size, const char *fmt)  { return DateTimeImpl::format(ptr, size, fmt); }
    };
 
    DateTime::DateTime()                : _dtb(new DateTimeBridge(),            [](DateTimeBridge *dtb) { delete dtb; }) {}  
@@ -43,11 +39,10 @@ namespace NST {
    int DateTime::getMinutes()   { return _dtb->getMinutes();   }
    int DateTime::getSeconds()   { return _dtb->getSeconds();   }
 
-//   string     DateTime::toString(const char* fmt)                         { return _dtb->toString(fmt); }
-   char*      DateTime::toChar  (char *ptr, size_t size)       { return _dtb->toChar(ptr, size); }
-   char*      DateTime::format  (char *ptr, size_t size, const char *fmt)       { return _dtb->format(ptr, size, fmt); }
-   struct tm* DateTime::getTM   ()                { return _dtb->getTM();     }
-   time_t     DateTime::timet()                  { return _dtb->timet(); }
+   char*      DateTime::toChar  (char *ptr)  { return _dtb->toChar(ptr); }
+   string     DateTime::toString()           { return _dtb->toString();  }
+   struct tm* DateTime::getTM   ()           { return _dtb->getTM();     }
+   time_t     DateTime::timet   ()           { return _dtb->timet();     }
 
    DateTime& DateTime::addHours        (int amount)         { _dtb->addHours   (amount)        ; return *this; }
    DateTime& DateTime::subtractHours   (int amount)         { _dtb->addHours   (amount * -1)   ; return *this; }
@@ -55,12 +50,11 @@ namespace NST {
    DateTime& DateTime::subtractMinutes (int amount)         { _dtb->addMinutes (amount * -1)   ; return *this; }
    DateTime& DateTime::addSeconds      (int amount)         { _dtb->addSeconds (amount)        ; return *this; }
    DateTime& DateTime::subtractSeconds (int amount)         { _dtb->addSeconds (amount * -1)   ; return *this; }
-   DateTime& DateTime::add             (const char *amount) { _dtb->addDateTime    (amount)        ; return *this; }
-   DateTime& DateTime::subtract        (const char *amount) { _dtb->addDateTime    (amount, false) ; return *this; }
    DateTime& DateTime::add             (string amount)      { return add(amount.c_str());      };
    DateTime& DateTime::subtract        (string amount)      { return subtract(amount.c_str()); };
 
-   long  DateTime::diffAsLong      (DateTime& t)            { return t.timet() - timet();    };
+//   long  DateTime::diffAsLong      (DateTime& t)            { return t.timet() - timet();    };
+/*
    DateTime  DateTime::diffAsDateTime      (DateTime& t)            { 
       long src = timet();
       long dst = t.timet();
@@ -76,47 +70,44 @@ namespace NST {
       _dtb->addAmountDateTime(t._dtb->timet() * -1);
       return *this;
    };
+*/
    DateTime  DateTime::operator +  (DateTime& t) { 
-      long lvalue = _dtb->timet() + t.timet();
+      time_t lvalue = _dtb->timet() + t.timet();
       return DateTime(lvalue);
    };
    DateTime  DateTime::operator -  (DateTime& t){ 
-      long lvalue = _dtb->timet() - t.timet();
+      time_t lvalue = _dtb->timet() - t.timet();
       return DateTime(lvalue);
    };
-   DateTime& DateTime::operator +=(time_t t) { _dtb->addTimeT(t)     ; return *this; }
-   DateTime& DateTime::operator -=(time_t t) { _dtb->addTimeT(t * -1); return *this; }
-   DateTime  operator + (time_t t) { 
-      long lvalue = _dtb->timet() + t;
-      return DateTime(lvalue);
-   };
-   DateTime  operator - (time_t t){ 
-      long lvalue = _dtb->timet() + t;
-      return DateTime(lvalue);
-   };
-   DateTime& DateTime::operator +=(string str) { 
-     addTime(str.c_str()); 
-     return *this; 
-    }
+   DateTime& DateTime::operator +=(time_t t)   { _dtb->addTime_t(t)     ; return *this; }
+   DateTime& DateTime::operator -=(time_t t)   { _dtb->addTime_t(t * -1); return *this; }
+   DateTime& DateTime::operator +=(string str) { _dtb->addFromString(str.c_str()); return *this; }
    DateTime& DateTime::operator -=(string str) {
       string tmp = str;
       if (str.at(0) != '+' && str.at(0) != '-') {
           tmp = string("-").append(str);
       }
-      addTime(tmp.c_str()); 
+      _dtb->addFromString(tmp.c_str()); 
       return *this;
    }
-   DateTime  operator + (string);
-   DateTime  operator - (string);
+/*
+   DateTime  operator + (string str) {
+     _dtb->addString(str); return *this; 
+   }
+   DateTime  operator - (string str);
+*/
    DateTime& DateTime::operator +=(const char *str) {
+      _dtb->addFromString(str); 
       return *this;
    }
    DateTime& DateTime::operator -=(const char *str) {
+      string tmp(str);
+      if (tmp.at(0) != '+' && tmp.at(0) != '-') {
+          tmp = string("-").append(str);
+      }
+      _dtb->addFromString(tmp.c_str()); 
       return *this;
    }
-   DateTime  operator + (const char *str);
-   DateTime  operator - (const char *str);
-
    bool  DateTime::operator==  (DateTime& t) { return   _dtb->timet() == t._dtb->timet();  }
    bool  DateTime::operator!=  (DateTime& t) { return !(_dtb->timet() == t._dtb->timet()); }
    bool  DateTime::operator<   (DateTime& t) { return   _dtb->timet() <  t._dtb->timet();  }

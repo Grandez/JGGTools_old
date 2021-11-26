@@ -15,6 +15,8 @@
 #pragma warning( disable : 4996 )
 #endif
 
+using namespace std;
+
 namespace NST {
    TimeImpl::TimeImpl()                {
       time_t now = time(0);
@@ -42,6 +44,12 @@ namespace NST {
    }
    TimeImpl::TimeImpl(long lvalue) : TimeImpl() { setLongTime(lvalue); }
    char* TimeImpl::toChar   (char *ptr, size_t size) { return format(ptr, size, "%X"); }
+   string TimeImpl::toString   (const char *fmt) {
+       if (fmt == 0x0) fmt = "%X"; 
+       char sz[32];
+       format(sz, 32, fmt); 
+       return string(sz);
+   }
    char* TimeImpl::format   (char* buff, size_t size, const char *fmt) {
         strftime (buff, size, fmt, &mtm);
         return buff;
@@ -50,7 +58,10 @@ namespace NST {
    int TimeImpl::getMinutes()  { return mtm.tm_min;  }
    int TimeImpl::getSeconds()  { return mtm.tm_sec;  }
 
-   struct tm*  TimeImpl::getTM()     { return &mtm;  }
+   struct tm*  TimeImpl::getTM(struct tm* ptm)     { 
+        memcpy(ptm, &mtm, sizeof(struct tm));
+        return ptm;
+   }
    long        TimeImpl::longValue() { return ltime; }
 
    void TimeImpl::addHours      (int amount)  { addAmountTime(amount * 3600); }

@@ -61,7 +61,10 @@ namespace NST {
         strftime (buff, size, fmt, &mtm);
         return buff;
    }
-   struct tm*  DateImpl::getTM()     { return &mtm;  }
+   struct tm*  DateImpl::getTM(struct tm* ptm)     { 
+        memcpy(ptm, &mtm, sizeof(struct tm));
+        return ptm;
+   }
    long        DateImpl::longValue() { 
 return ldate; 
 }

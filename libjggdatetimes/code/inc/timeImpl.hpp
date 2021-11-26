@@ -4,6 +4,8 @@
 
 #include "../../../include/config.h"
 
+using namespace std;
+
 namespace NST {
    class TimeImpl {
    public:   
@@ -18,8 +20,8 @@ namespace NST {
 
       char*   toChar   (char *ptr, size_t size);
       char*   format   (char* buff, size_t size, const char *fmt);
-      //string      toString (const char* fmt);
-      struct tm* getTM();
+      string  toString (const char *fmt);
+      struct tm*  getTM(struct tm*);
 
       // Time
       long longValue     ();

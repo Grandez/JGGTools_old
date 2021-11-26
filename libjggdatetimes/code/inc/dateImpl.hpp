@@ -22,7 +22,7 @@ namespace NST {
       char*   toChar   (char *ptr);
       char*   format   (char* buff, size_t size, const char *fmt);
       //string      toString (const char* fmt);
-      struct tm* getTM();
+      struct tm* getTM(struct tm* ptm);
 
       // Date
       long longValue     ();

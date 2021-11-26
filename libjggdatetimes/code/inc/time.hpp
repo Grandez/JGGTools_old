@@ -14,13 +14,14 @@ public:
    Time(const char *str);
    Time(int hour, int min, int sec);
    Time(long lvalue);
-   struct tm*  getTM();
+   struct tm*  getTM(struct tm*);
    long        asLong();
    int         getHour();
    int         getMinutes();
    int         getSeconds();
  //  string  toString(const char* fmt = "%X");
    char*   toChar  (char *ptr, size_t size); // , size_t size, const char* fmt = "%X");
+   string  toString  (const char *fmt); // , size_t size, const char* fmt = "%X");
    char*   format  (char *ptr, size_t size, const char *fmt);
    Time& addHours        (int amount);
    Time& subtractHours   (int amount);

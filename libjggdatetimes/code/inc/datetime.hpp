@@ -24,9 +24,8 @@ public:
    int         getMinutes  ();
    int         getSeconds  ();
 
- //  string  toString(const char* fmt = "%X");
-   char*   toChar  (char *ptr, size_t size); // , size_t size, const char* fmt = "%X");
-   char*   format  (char *ptr, size_t size, const char *fmt);
+   char*     toChar          (char *ptr);
+   string    toString        ();
    DateTime& addHours        (int amount);
    DateTime& subtractHours   (int amount);
    DateTime& addMinutes      (int amount);
@@ -60,10 +59,7 @@ public:
    bool operator<=(DateTime&) ;
    bool operator> (DateTime&) ;
    bool operator>=(DateTime&) ;
-
-   long  diffAsLong (DateTime& t);
-   DateTime  diffAsDateTime (DateTime& t);
-   
+  
 private:
    class DateTimeBridge;
    unique_ptr<DateTimeBridge, void (*)(DateTimeBridge *)> _dtb;

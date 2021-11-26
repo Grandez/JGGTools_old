@@ -17,9 +17,6 @@ namespace NST {
      TimeBridge(const char *str)            : TimeImpl(str) {}
      TimeBridge(int hour, int min, int sec) : TimeImpl(hour, min, sec) {}
      TimeBridge(long lvalue)                : TimeImpl(lvalue) {}
-//     string      toString (const char* fmt) { return DateTimeBase::toString(fmt); }
-     char*   toChar   (char* ptr, size_t size)                   { return TimeImpl::toChar(ptr, size); }
-     char*   format   (char *ptr, size_t size, const char *fmt)  { return TimeImpl::format(ptr, size, fmt); }
    };
 
    Time::Time()                : _dtb(new TimeBridge(),            [](TimeBridge *dtb) { delete dtb; }) {}  
@@ -33,10 +30,10 @@ namespace NST {
    int Time::getMinutes()  { return _dtb->getMinutes(); }
    int Time::getSeconds()  { return _dtb->getSeconds(); }
 
-//   string     Time::toString(const char* fmt)                         { return _dtb->toString(fmt); }
+   string     Time::toString(const char* fmt)              { return _dtb->toString(fmt); }
    char*      Time::toChar  (char *ptr, size_t size)       { return _dtb->toChar(ptr, size); }
    char*      Time::format  (char *ptr, size_t size, const char *fmt)       { return _dtb->format(ptr, size, fmt); }
-   struct tm* Time::getTM   ()                { return _dtb->getTM();     }
+   struct tm* Time::getTM   (struct tm* ptm)  { return _dtb->getTM(ptm);  }
    long       Time::asLong  ()                { return _dtb->longValue(); }
 
    Time& Time::addHours        (int amount)         { _dtb->addHours   (amount)        ; return *this; }

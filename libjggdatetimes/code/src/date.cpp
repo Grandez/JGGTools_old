@@ -30,7 +30,7 @@ namespace NST {
    Date::Date(int year,int month,int day) : _dtb(new DateBridge(year, month, day), [](DateBridge *dtb) { delete dtb; }) {}  
 //   string     Date::toString(const char* fmt)                         { return _dtb->toString(fmt); }
    char*      Date::toChar  (char *ptr)       { return _dtb->toChar(ptr);    }
-   struct tm* Date::getTM   ()                { return _dtb->getTM();        }
+   struct tm* Date::getTM   (struct tm* ptm)  { return _dtb->getTM(ptm);     }
    long       Date::asLong  ()                { return _dtb->longValue();    }
    int        Date::getYear ()                { return _dtb->getYear();      }
    int        Date::getMonth()                { return _dtb->getMonth();     }
