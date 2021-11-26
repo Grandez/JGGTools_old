@@ -1,0 +1,8 @@
+
+/** @defgroup exceptions Exceptions
+    Exceptions classes
+*/
+
+/** @defgroup config Configuration
+    System can be configurable when you build the libraries
+*/

@@ -1,0 +1,82 @@
+/** \class jggtools::sstring
+  *  \ingroup cadena
+  *  \brief Subclase de string con metoos auxiliares
+  *  
+  * Extiende la clase String con utilidades para su manejo
+  *  
+  */
+
+///@{  
+/**
+   \fn sstring::ltrim
+   \brief remove spaces **inplace** from left  
+   @return reference to object
+*/
+/**
+   \fn sstring::ltrim
+   \brief remove spaces **inplace** from left and right  
+   @return reference to object
+*/
+/**
+   \fn sstring::trim
+   \brief remove spaces **inplace** from left and right  
+   @return reference to object
+*/
+///@}
+
+///@{  
+/**
+   \fn sstring::toUpper
+   \brief Put the string in upper case
+   @return reference to object
+*/
+/**
+   \fn sstring::toLower
+   \brief Put the string in lower case
+   @return reference to object
+*/
+///@}
+
+/**
+   \fn sstring::contains(const char *pattern);
+   \brief Check if string contains the pattern
+   \param reg exp to match
+   
+   @return TRUE if found
+*/
+/**
+   \fn sstring::makeBoolean()
+   \brief Convert the string to boolean
+   Evaluate any string according first character:
+   ** False **:
+   - N
+   - F
+   - 0
+   ** True**:
+   Other cases
+   @return true or false
+*/
+
+///@{
+/**
+   \fn vector<char *> sstring::tokenize(const char *pattern )
+   \brief Split the estring into pieces according a reg exp
+   \param patter to split the string
+   @return a vector of tokens
+*/
+/**
+   \fn vector<string> sstring::tokenize(string pattern )
+   \brief Split the estring into pieces according a reg exp
+   \param patter to split the string
+   @return a vector of tokens
+*/
+///@}
+
+/**
+   \fn string sstring::paste(const char *sep, ...)
+   \brief Generate a new string pasting ... at end of current string
+   \param sep string to put between pieces
+   \param ... strigns to append
+   @return return a new string 
+*/
+                                      

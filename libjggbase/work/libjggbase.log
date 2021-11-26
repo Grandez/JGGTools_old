@@ -1,0 +1,20 @@
+﻿Build started 26/11/2021 0:07:08.
+Logging verbosity is set to: Normal.     1>Project "P:\C\jggtools\libjggbase\libjggbase.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "P:\C\jggtools\libjggbase\work\libjggbase.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"P:\C\jggtools\libjggbase\work\\" /Fd"P:\C\jggtools\libjggbase\lib\libjggbase64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\exceptions.cpp
+         exceptions.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\jggtools\libjggbase\lib\libjggbase64.lib" /NOLOGO /MACHINE:X64 P:\C\jggtools\libjggbase\work\exceptions.obj
+         libjggbase.vcxproj -> P:\C\jggtools\libjggbase\lib\libjggbase64.lib
+       FinalizeBuildStatus:
+         Deleting file "P:\C\jggtools\libjggbase\work\libjggbase.tlog\unsuccessfulbuild".
+         Touching "P:\C\jggtools\libjggbase\work\libjggbase.tlog\libjggbase.lastbuildstate".
+     1>Done Building Project "P:\C\jggtools\libjggbase\libjggbase.vcxproj" (Build target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.69

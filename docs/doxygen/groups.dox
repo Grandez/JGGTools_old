@@ -1,0 +1,23 @@
+
+/** @defgroup cadena Cadenas
+    Classes related to strings
+*/
+
+/** @defgroup datetime Fechas y horas
+    Classes related to date and times
+*/
+
+/** @defgroup number Numbers
+   Classes related to numbers
+*/
+
+/** @defgroup filesystem Filesystem
+   Classes related to paths and files
+*/
+
+/** @defgroup exceptions Exceptions
+   Exceptions throwed 
+   
+   Main target of these tools is check when some string can be casted to another type.
+   In exmple, trying to construct a date from "2020/02/31" must thrown an exception because february has not 31 days
+*/

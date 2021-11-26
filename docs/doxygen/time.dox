@@ -1,0 +1,86 @@
+/** 
+   \class jggtools::Time
+   \ingroup datetime
+   \brief Clase Time
+    
+   Abstraction of a time
+   Time is represented as %H:%M:%S
+  
+*/
+
+///@{
+
+/** 
+   @fn Time::Time();
+   \brief Default constructor for a time
+ 
+   Initialize the instance to current time
+ 
+*/
+
+/** 
+    @fn Time::Time(const Time&);
+    \brief Copy constructor
+*/
+
+/** 
+   @fn Time::Time(string str);
+   \brief Constructor from an string
+   \param[in] str An string according one of allowed formats
+ */
+
+/**
+   @fn Time::Time(const *char str);
+   \brief Constructor from an char *
+   \param[in] str An array according one of allowed formats
+ */
+
+///@}
+
+///@{
+/** 
+    @fn int Time::getHour();
+   \brief Returns the hour associated with the object
+   \return Hour
+*/
+
+/** 
+    @fn int Time::getMiutes();
+   \brief Returns minutes associated with the object
+   \return Minutes
+*/
+
+/** 
+    @fn int Time::getSeconds();
+   \brief Returns Seconds associated with the object
+   \return Seconds
+*/
+
+///@}
+
+/** 
+  @fn int struct tm *Time::getTM();
+ \brief Return a pointer to an struct tm when time pieces are associated with the object
+ 
+  Other fields at struct can be associated with current date
+ 
+  \return a poinetr to struct tm
+*/
+
+///@{
+
+/** 
+    @fn sstring Time::toString ();
+    \brief Return a representation of Time as %H:%M:%S
+   
+    \return An string as %H:%M:%S
+ */
+
+/** 
+    @fn const char * Time::toChar ();
+    \brief Return a representation of Time as %H:%M:%S
+   
+    \return A **new copy** as %H:%M:%S
+ */
+
+///@} 

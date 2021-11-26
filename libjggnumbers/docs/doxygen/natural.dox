@@ -1,0 +1,50 @@
+/** 
+   \class jggtools::Natural
+   \ingroup number
+   \brief Natural numbers
+   
+   A natural number is a positive and intenger number (including zero)
+*/
+/** 
+   @fn Natural::Natural(sstring value);
+   \brief Construct a natural number from an string
+ 
+*/
+/** 
+   @fn Natural::Natural(const char *value);
+   \brief Construct a natural number from an char array
+ 
+*/
+/** 
+   @fn Natural::Natural(short value);
+   \brief Construct a natural number from a short number 
+*/
+/** 
+   @fn Natural::Natural(int value);
+   \brief Construct a natural number from a int number 
+*/
+/** 
+   @fn Natural::Natural(long value);
+   \brief Construct a natural number from a long number 
+*/
+/** 
+   @fn Natural::Natural(long long value);
+   \brief Construct a natural number from a long long number 
+*/
+/** 
+   @fn Natural::isShort();
+   @return TRUE if natural fit in a primitive short type
+*/
+/** 
+   @fn Natural::isInteger();
+   @return TRUE if natural fit in a primitive integer type
+*/
+/** 
+   @fn Natural::isLong();
+   @return TRUE if natural fit in a primitive long type
+*/
+/** 
+   @fn Natural::isLongLong();
+   @return TRUE if natural fit in a primitive long long type
+*/
+

@@ -1,0 +1,36 @@
+/** \class jggtools::ToolsException
+  *  \ingroup exceptions                
+  *  \brief Base clase for exception into the library
+  *  
+  */
+  
+/**
+   \fn ToolsException::ToolsException(const char *fmt, ...)
+   \brief Constructor for the exception
+   \param fmt Pattern to mount the message used in what
+   \param ... values for pattern
+*/
+
+/**   
+   \fn string ToolsException::what()
+   \return The message associate to exception
+*/
+
+/**
+   \class ToolsValueException::ToolsValueException
+   \ingroup exceptions
+   \brief Exception when data not fit the range of values
+*/
+
+/**
+   \class ToolsCastException::ToolsCastException
+   \ingroup exceptions
+   \brief Exception when it is not possible construct the object using data passed to constructor
+*/
+/**
+   \fn ToolsCastException::ToolsCastException(const char *fmt, ...)
+   \brief Constructor for the exception
+   \param fmt Pattern to mount the message used in what
+   \param ... values for pattern
+*/
+

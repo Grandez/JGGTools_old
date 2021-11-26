@@ -1,0 +1,15 @@
+
+/** @def JGGTOOLS_NS
+    @ingroup config
+    Define the default namespace when you build the system
+    
+    By default is **jggtools**
+*/
+
+/** @def JGGTOOLS_ERRNO
+    @ingroup config
+    Define the number base for errno codes
+    Error codes are defined using `define name` starting this value
+    
+    By default is **16000**
+*/

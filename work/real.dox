@@ -1,0 +1,7 @@
+/** 
+   \class jggtools::Real
+   \ingroup number
+   \brief Decimal numbers
+   
+   Float and doubles
+*/

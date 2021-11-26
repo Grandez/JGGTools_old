@@ -1,0 +1,50 @@
+/** 
+   \class jggtools::Integer
+   \ingroup number
+   \brief Integer numbers
+   
+   A Integer number is an integer, not decimal, number, positive or negative
+*/
+/** 
+   @fn Integer::Integer(sstring value);
+   \brief Construct a Integer number from an string
+ 
+*/
+/** 
+   @fn Integer::Integer(const char *value);
+   \brief Construct a Integer number from an char array
+ 
+*/
+/** 
+   @fn Integer::Integer(short value);
+   \brief Construct a Integer number from a short number 
+*/
+/** 
+   @fn Integer::Integer(int value);
+   \brief Construct a Integer number from a int number 
+*/
+/** 
+   @fn Integer::Integer(long value);
+   \brief Construct a Integer number from a long number 
+*/
+/** 
+   @fn Integer::Integer(long long value);
+   \brief Construct a Integer number from a long long number 
+*/
+/** 
+   @fn Integer::isShort();
+   @return TRUE if Integer fit in a primitive short type
+*/
+/** 
+   @fn Integer::isInteger();
+   @return TRUE if Integer fit in a primitive integer type
+*/
+/** 
+   @fn Integer::isLong();
+   @return TRUE if Integer fit in a primitive long type
+*/
+/** 
+   @fn Integer::isLongLong();
+   @return TRUE if Integer fit in a primitive long long type
+*/
+

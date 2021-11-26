@@ -1,0 +1,74 @@
+﻿Build started 26/11/2021 0:14:16.
+Logging verbosity is set to: Normal.     1>Project "P:\C\jggtools\libjggdatetimes\libjggdatetimes.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "P:\C\jggtools\libjggdatetimes\work/libjggdatetimes.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"P:\C\jggtools\libjggdatetimes\work/" /Fd"P:\C\jggtools\libjggdatetimes\lib/libjggdatetimes64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\datetime.cpp code\src\datetimeImpl.cpp
+         datetime.cpp
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(63,80): warning C4244: 'return': conversion from 'time_t' to 'long', possible loss of data
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(65,16): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(66,16): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(80,19): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(84,19): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(89,36): error C2803: 'operator +' must have at least one formal parameter of class type
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(90,21): error C2065: '_dtb': undeclared identifier
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(93,35): error C2803: 'operator -' must have at least one formal parameter of class type
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(94,21): error C2065: '_dtb': undeclared identifier
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(98,6): error C3861: 'addTime': identifier not found
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(106,7): error C3861: 'addTime': identifier not found
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(117,42): error C2803: 'operator +' must have at least one formal parameter of class type
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(118,42): error C2803: 'operator -' must have at least one formal parameter of class type
+         datetimeImpl.cpp
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(29,20): error C2064: term does not evaluate to a function taking 1 arguments
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(96,33): error C2065: 'now': undeclared identifier
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(96,56): error C2660: 'memcpy': function does not take 2 arguments
+       C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_string.h(43,15): message : see declaration of 'memcpy'
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(98,61): error C2511: 'void jggtools::DateTimeImpl::updateDateTime(unsigned long)': overloaded member function not found in 'jggtools::DateTimeImpl'
+       P:\C\jggtools\libjggdatetimes\code\inc\datetimeImpl.hpp(12): message : see declaration of 'jggtools::DateTimeImpl'
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,13): error C2664: 'size_t strlen(const char *)': cannot convert argument 1 from 'char' to 'const char *'
+       P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,36): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+       C:\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(215,16): message : see declaration of 'strlen'
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,82): error C2664: 'jggtools::ToolsValueException::ToolsValueException(const char *,...)': cannot convert argument 1 from 'char' to 'const char *'
+       P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,77): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+       P:\C\jggtools\include\exceptions.hpp(22,10): message : see declaration of 'jggtools::ToolsValueException::ToolsValueException'
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(132,34): error C2109: subscript requires array or pointer type
+     1>P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(132,35): error C2664: 'void jggtools::DateTimeImpl::addString(const char *)': cannot convert argument 1 from 'long' to 'const char *'
+       P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(132,20): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
+       P:\C\jggtools\libjggdatetimes\code\inc\datetimeImpl.hpp(45,12): message : see declaration of 'jggtools::DateTimeImpl::addString'
+         Generating Code...
+     1>Done Building Project "P:\C\jggtools\libjggdatetimes\libjggdatetimes.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+       "P:\C\jggtools\libjggdatetimes\libjggdatetimes.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(63,80): warning C4244: 'return': conversion from 'time_t' to 'long', possible loss of data
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(65,16): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(66,16): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(80,19): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(84,19): warning C4244: 'initializing': conversion from 'time_t' to 'long', possible loss of data
+
+
+       "P:\C\jggtools\libjggdatetimes\libjggdatetimes.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(89,36): error C2803: 'operator +' must have at least one formal parameter of class type
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(90,21): error C2065: '_dtb': undeclared identifier
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(93,35): error C2803: 'operator -' must have at least one formal parameter of class type
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(94,21): error C2065: '_dtb': undeclared identifier
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(98,6): error C3861: 'addTime': identifier not found
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(106,7): error C3861: 'addTime': identifier not found
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(117,42): error C2803: 'operator +' must have at least one formal parameter of class type
+         P:\C\jggtools\libjggdatetimes\code\src\datetime.cpp(118,42): error C2803: 'operator -' must have at least one formal parameter of class type
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(29,20): error C2064: term does not evaluate to a function taking 1 arguments
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(96,33): error C2065: 'now': undeclared identifier
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(96,56): error C2660: 'memcpy': function does not take 2 arguments
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(98,61): error C2511: 'void jggtools::DateTimeImpl::updateDateTime(unsigned long)': overloaded member function not found in 'jggtools::DateTimeImpl'
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,13): error C2664: 'size_t strlen(const char *)': cannot convert argument 1 from 'char' to 'const char *'
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(131,82): error C2664: 'jggtools::ToolsValueException::ToolsValueException(const char *,...)': cannot convert argument 1 from 'char' to 'const char *'
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(132,34): error C2109: subscript requires array or pointer type
+         P:\C\jggtools\libjggdatetimes\code\src\datetimeImpl.cpp(132,35): error C2664: 'void jggtools::DateTimeImpl::addString(const char *)': cannot convert argument 1 from 'long' to 'const char *'
+
+    5 Warning(s)
+    16 Error(s)
+
+Time Elapsed 00:00:00.97

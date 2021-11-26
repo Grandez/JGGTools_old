@@ -1,0 +1,42 @@
+﻿Build started 24/11/2021 15:42:48.
+Logging verbosity is set to: Normal.     1>Project "P:\C\jggtools\libjggnumbers\libjggnumbers.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "P:\C\jggtools\libjggnumbers\work/libjggnumbers.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"P:\C\jggtools\libjggnumbers\work/" /Fd"P:\C\jggtools\libjggnumbers\lib/libjggnumbers64.pdb" /external:W3 /Gd /TP /FC /errorReport:prompt code\src\decimal.cpp code\src\decimalImpl.cpp code\src\decimal_wrapper.cpp
+         decimal.cpp
+         decimalImpl.cpp
+     1>P:\C\jggtools\libjggnumbers\code\src\decimalImpl.cpp(62,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+         decimal_wrapper.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\Lib.exe /OUT:"P:\C\jggtools\libjggnumbers\lib/libjggnumbers64.lib" /NOLOGO /MACHINE:X64 /VERBOSE P:\C\jggtools\libjggnumbers\work/bigdecimal.obj
+         P:\C\jggtools\libjggnumbers\work/decimal.obj
+         P:\C\jggtools\libjggnumbers\work/decimalImpl.obj
+         P:\C\jggtools\libjggnumbers\work/decimal_wrapper.obj
+         P:\C\jggtools\libjggnumbers\work/integer.obj
+         P:\C\jggtools\libjggnumbers\work/natural.obj
+         P:\C\jggtools\libjggnumbers\work/real.obj
+         Appending P:\C\jggtools\libjggnumbers\work\real.obj
+         Appending P:\C\jggtools\libjggnumbers\work\natural.obj
+         Appending P:\C\jggtools\libjggnumbers\work\integer.obj
+         Appending P:\C\jggtools\libjggnumbers\work\decimal_wrapper.obj
+         Appending P:\C\jggtools\libjggnumbers\work\decimalImpl.obj
+         Appending P:\C\jggtools\libjggnumbers\work\decimal.obj
+         Appending P:\C\jggtools\libjggnumbers\work\bigdecimal.obj
+         libjggnumbers.vcxproj -> P:\C\jggtools\libjggnumbers\lib\libjggnumbers64.lib
+       FinalizeBuildStatus:
+         Deleting file "P:\C\jggtools\libjggnumbers\work/libjggnumbers.tlog\unsuccessfulbuild".
+         Touching "P:\C\jggtools\libjggnumbers\work/libjggnumbers.tlog\libjggnumbers.lastbuildstate".
+     1>Done Building Project "P:\C\jggtools\libjggnumbers\libjggnumbers.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+       "P:\C\jggtools\libjggnumbers\libjggnumbers.vcxproj" (Build target) (1) ->
+       (ClCompile target) -> 
+         P:\C\jggtools\libjggnumbers\code\src\decimalImpl.cpp(62,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.97
