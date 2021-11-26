@@ -36,17 +36,19 @@ Por otro lado, las operaciones sobre fechas, segun idiomas o funciones no suelen
    
 ### Time
 
-Esta clase no plantea demasiados problemas, el formato general siempre es hh:mm:ss y los limites estan bien establecidos, asi que se puede operar sobre el objeto sin ambiguedades
+Esta clase no plantea demasiados problemas, el formato general siempre es hh:mm:ss y los limites están bien establecidos, así que se puede operar sobre el objeto sin ambiguedades
 
 ### DateTime
 
 Esta clase se establece de manera general con el siguiente formato: `yyyy/mm/dd hh:mm:ss`.
-Con lo que no hay ambigüedad en el tratamiento de la fecha salvo el caso ya mencionado de los ultimos dias de cada mes
+Con lo que no hay ambigüedad en el tratamiento de la fecha salvo el caso ya mencionado de los últimos dias de cada mes.
+
+Se corresponde con **struct tm**
 
 ### Timestamp
 
 Esta clase, muy vinculada a bases de datos, se almacena internamente en una dato de 8 bytes pero se maneja como una cadena con el siguiente formato: `yyyy-mm-dd-hh:mm:ss.nnnnnn`
-En muchos sistemas, ademas, se garantiza, dada la precision, que nunca se generarán dos timestamps iguales
+En muchos sistemas, ademas, se garantiza, dada la precisión, que nunca se generarán dos timestamps iguales
 
 
 ## Clases
